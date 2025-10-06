@@ -15,30 +15,30 @@
   "skills": {
     "title": "Exceptional Quality",
     "subtitle": "Built with precision, powered by innovation",
+    "integrations": {
+      "title": "Complete Integrations",
+      "description": "Connect your website with payment systems, social media, analytics, and other services you already use.",
+      "features": ["Online Payments", "Email Services", "Social Media Login", "Analytics & Tracking"]
+    },
     "security": {
-      "title": "Robust Security",
-      "description": "Enterprise-grade security measures including authentication, encryption, and protection against common vulnerabilities.",
-      "features": ["JWT Authentication", "Data Encryption", "SQL Injection Protection", "XSS Prevention"]
+      "title": "Protected & Safe",
+      "description": "Your website and customer data are protected with the latest security measures against hackers and threats.",
+      "features": ["Secure User Login", "Protected Data", "Hacker Prevention", "Safe Transactions"]
     },
     "database": {
-      "title": "Database Excellence",
-      "description": "Optimized database architecture with MongoDB, PostgreSQL, and Redis for lightning-fast data operations.",
-      "features": ["MongoDB", "PostgreSQL", "Redis Cache", "Query Optimization"]
+      "title": "Fast & Reliable Storage",
+      "description": "Your information is stored securely and loads instantly, ensuring your website runs smoothly at all times.",
+      "features": ["Quick Loading", "Reliable Storage", "Instant Access", "Always Available"]
     },
     "logic": {
-      "title": "Deep Logic",
-      "description": "Complex algorithms and business logic implementation with clean, maintainable, and scalable code architecture.",
-      "features": ["Clean Architecture", "Design Patterns", "Algorithm Optimization", "Scalable Code"]
+      "title": "Smart Features",
+      "description": "Intelligent automation and custom features that make your website work exactly how you need it to.",
+      "features": ["Custom Automation", "Smart Workflows", "Intelligent Systems", "Future-Ready"]
     },
     "design": {
-      "title": "Stunning Design",
-      "description": "Pixel-perfect interfaces with modern UI/UX principles, responsive layouts, and smooth animations.",
-      "features": ["Responsive Design", "Modern UI/UX", "Animations", "Accessibility"]
-    },
-    "integrations": {
-      "title": "Third-Party Integrations",
-      "description": "Seamless integration with APIs, payment gateways, analytics, authentication providers, and cloud services.",
-      "features": ["REST APIs", "Payment Gateways", "OAuth 2.0", "Cloud Services"]
+      "title": "Beautiful Design",
+      "description": "Eye-catching modern designs that look perfect on all devices - phones, tablets, and computers.",
+      "features": ["Mobile Friendly", "Modern Look", "Smooth Effects", "Easy to Use"]
     }
   },
   "portfolio": {

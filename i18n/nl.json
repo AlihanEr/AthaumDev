@@ -15,30 +15,30 @@
   "skills": {
     "title": "Uitzonderlijke Kwaliteit",
     "subtitle": "Gebouwd met precisie, aangedreven door innovatie",
+    "integrations": {
+      "title": "Volledige Integraties",
+      "description": "Verbind uw website met betalingssystemen, sociale media, analyses en andere diensten die u al gebruikt.",
+      "features": ["Online Betalingen", "E-maildiensten", "Social Media Login", "Analyses & Tracking"]
+    },
     "security": {
-      "title": "Robuuste Beveiliging",
-      "description": "Beveiligingsmaatregelen op bedrijfsniveau, inclusief authenticatie, encryptie en bescherming tegen veelvoorkomende kwetsbaarheden.",
-      "features": ["JWT Authenticatie", "Data Encryptie", "SQL Injectie Bescherming", "XSS Preventie"]
+      "title": "Beschermd & Veilig",
+      "description": "Uw website en klantgegevens worden beschermd met de nieuwste beveiligingsmaatregelen tegen hackers en bedreigingen.",
+      "features": ["Veilige Gebruikerslogin", "Beschermde Gegevens", "Hackerpreventie", "Veilige Transacties"]
     },
     "database": {
-      "title": "Database Excellence",
-      "description": "Geoptimaliseerde database-architectuur met MongoDB, PostgreSQL en Redis voor razendsnelle gegevensbewerkingen.",
-      "features": ["MongoDB", "PostgreSQL", "Redis Cache", "Query Optimalisatie"]
+      "title": "Snelle & Betrouwbare Opslag",
+      "description": "Uw informatie wordt veilig opgeslagen en laadt direct, zodat uw website altijd soepel werkt.",
+      "features": ["Snel Laden", "Betrouwbare Opslag", "Direct Toegang", "Altijd Beschikbaar"]
     },
     "logic": {
-      "title": "Diepe Logica",
-      "description": "Complexe algoritmen en bedrijfslogica-implementatie met schone, onderhoudbare en schaalbare code-architectuur.",
-      "features": ["Schone Architectuur", "Ontwerppatronen", "Algoritme Optimalisatie", "Schaalbare Code"]
+      "title": "Slimme Functies",
+      "description": "Intelligente automatisering en aangepaste functies die uw website precies laten werken zoals u dat wilt.",
+      "features": ["Aangepaste Automatisering", "Slimme Workflows", "Intelligente Systemen", "Toekomstbestendig"]
     },
     "design": {
-      "title": "Verbluffend Design",
-      "description": "Pixel-perfecte interfaces met moderne UI/UX-principes, responsieve lay-outs en vloeiende animaties.",
-      "features": ["Responsief Design", "Modern UI/UX", "Animaties", "Toegankelijkheid"]
-    },
-    "integrations": {
-      "title": "Integraties van Derden",
-      "description": "Naadloze integratie met API's, betalingsgateways, analyses, authenticatieproviders en clouddiensten.",
-      "features": ["REST API's", "Betalingsgateways", "OAuth 2.0", "Clouddiensten"]
+      "title": "Prachtig Design",
+      "description": "Opvallende moderne ontwerpen die er perfect uitzien op alle apparaten - telefoons, tablets en computers.",
+      "features": ["Mobiel Vriendelijk", "Moderne Look", "Vloeiende Effecten", "Makkelijk te Gebruiken"]
     }
   },
   "portfolio": {

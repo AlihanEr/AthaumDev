@@ -15,30 +15,30 @@
   "skills": {
     "title": "Qualité Exceptionnelle",
     "subtitle": "Construit avec précision, alimenté par l'innovation",
+    "integrations": {
+      "title": "Intégrations Complètes",
+      "description": "Connectez votre site avec les systèmes de paiement, réseaux sociaux, analyses et autres services que vous utilisez déjà.",
+      "features": ["Paiements en Ligne", "Services Email", "Connexion Réseaux Sociaux", "Analyses & Suivi"]
+    },
     "security": {
-      "title": "Sécurité Robuste",
-      "description": "Mesures de sécurité de niveau entreprise incluant l'authentification, le chiffrement et la protection contre les vulnérabilités courantes.",
-      "features": ["Authentification JWT", "Chiffrement des Données", "Protection SQL Injection", "Prévention XSS"]
+      "title": "Protégé & Sécurisé",
+      "description": "Votre site et les données clients sont protégés par les dernières mesures de sécurité contre les pirates et menaces.",
+      "features": ["Connexion Sécurisée", "Données Protégées", "Prévention Piratage", "Transactions Sûres"]
     },
     "database": {
-      "title": "Excellence de Base de Données",
-      "description": "Architecture de base de données optimisée avec MongoDB, PostgreSQL et Redis pour des opérations de données ultra-rapides.",
-      "features": ["MongoDB", "PostgreSQL", "Cache Redis", "Optimisation des Requêtes"]
+      "title": "Stockage Rapide & Fiable",
+      "description": "Vos informations sont stockées en toute sécurité et se chargent instantanément, garantissant que votre site fonctionne parfaitement.",
+      "features": ["Chargement Rapide", "Stockage Fiable", "Accès Instantané", "Toujours Disponible"]
     },
     "logic": {
-      "title": "Logique Approfondie",
-      "description": "Implémentation d'algorithmes complexes et de logique métier avec une architecture de code propre, maintenable et évolutive.",
-      "features": ["Architecture Propre", "Modèles de Conception", "Optimisation d'Algorithmes", "Code Évolutif"]
+      "title": "Fonctionnalités Intelligentes",
+      "description": "Automatisation intelligente et fonctionnalités personnalisées qui font fonctionner votre site exactement comme vous le souhaitez.",
+      "features": ["Automatisation Sur Mesure", "Flux Intelligents", "Systèmes Intelligents", "Prêt pour l'Avenir"]
     },
     "design": {
-      "title": "Design Époustouflant",
-      "description": "Interfaces au pixel près avec des principes UI/UX modernes, des mises en page responsives et des animations fluides.",
-      "features": ["Design Responsive", "UI/UX Moderne", "Animations", "Accessibilité"]
-    },
-    "integrations": {
-      "title": "Intégrations Tierces",
-      "description": "Intégration transparente avec des API, des passerelles de paiement, des analyses, des fournisseurs d'authentification et des services cloud.",
-      "features": ["APIs REST", "Passerelles de Paiement", "OAuth 2.0", "Services Cloud"]
+      "title": "Design Magnifique",
+      "description": "Des designs modernes accrocheurs qui s'affichent parfaitement sur tous les appareils - téléphones, tablettes et ordinateurs.",
+      "features": ["Compatible Mobile", "Look Moderne", "Effets Fluides", "Facile à Utiliser"]
     }
   },
   "portfolio": {
