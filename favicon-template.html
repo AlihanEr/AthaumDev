@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AthaumDev Favicon Template</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .favicon-container {
+            background: #0a0a0f;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* 32x32 Favicon */
+        .favicon-32 {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #0a0a0f 0%, #13131a 100%);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            font-weight: 900;
+            font-size: 20px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 212, 255, 0.3);
+        }
+
+        .favicon-32 .letter-a {
+            color: #ffffff;
+            position: absolute;
+            left: 4px;
+            z-index: 1;
+        }
+
+        .favicon-32 .letter-d {
+            background: linear-gradient(135deg, #00d4ff 0%, #b47eff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: absolute;
+            right: 4px;
+            z-index: 2;
+        }
+
+        /* 64x64 Favicon (preview) */
+        .favicon-64 {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #0a0a0f 0%, #13131a 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            font-weight: 900;
+            font-size: 40px;
+            position: relative;
+            box-shadow: 0 4px 16px rgba(0, 212, 255, 0.4);
+        }
+
+        .favicon-64 .letter-a {
+            color: #ffffff;
+            position: absolute;
+            left: 8px;
+            z-index: 1;
+        }
+
+        .favicon-64 .letter-d {
+            background: linear-gradient(135deg, #00d4ff 0%, #b47eff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: absolute;
+            right: 8px;
+            z-index: 2;
+        }
+
+        /* 128x128 Favicon (high res preview) */
+        .favicon-128 {
+            width: 128px;
+            height: 128px;
+            background: linear-gradient(135deg, #0a0a0f 0%, #13131a 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+            font-weight: 900;
+            font-size: 80px;
+            position: relative;
+            box-shadow: 0 8px 32px rgba(0, 212, 255, 0.4);
+        }
+
+        .favicon-128 .letter-a {
+            color: #ffffff;
+            position: absolute;
+            left: 16px;
+            z-index: 1;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        }
+
+        .favicon-128 .letter-d {
+            background: linear-gradient(135deg, #00d4ff 0%, #b47eff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: absolute;
+            right: 16px;
+            z-index: 2;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        }
+
+        .info {
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .info h2 {
+            color: #00d4ff;
+            margin-bottom: 10px;
+        }
+
+        .info p {
+            color: #8a8a8a;
+            line-height: 1.6;
+        }
+
+        .sizes {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .size-label {
+            text-align: center;
+            color: #8a8a8a;
+            font-family: Arial, sans-serif;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+        <h2>AthaumDev Favicon Preview</h2>
+        <p>Below are different sizes of the favicon. Screenshot or use a favicon generator tool to create the actual .ico or .png files.</p>
+    </div>
+
+    <div class="sizes">
+        <div>
+            <div class="favicon-container">
+                <div class="favicon-32">
+                    <span class="letter-a">A</span>
+                    <span class="letter-d">D</span>
+                </div>
+            </div>
+            <div class="size-label">32x32 (Standard)</div>
+        </div>
+
+        <div>
+            <div class="favicon-container">
+                <div class="favicon-64">
+                    <span class="letter-a">A</span>
+                    <span class="letter-d">D</span>
+                </div>
+            </div>
+            <div class="size-label">64x64 (Retina)</div>
+        </div>
+
+        <div>
+            <div class="favicon-container">
+                <div class="favicon-128">
+                    <span class="letter-a">A</span>
+                    <span class="letter-d">D</span>
+                </div>
+            </div>
+            <div class="size-label">128x128 (Touch Icon)</div>
+        </div>
+    </div>
+
+    <div class="info" style="margin-top: 40px;">
+        <h3 style="color: #b47eff;">How to Use:</h3>
+        <p>
+            1. Screenshot these favicons at their actual sizes<br>
+            2. Use an online tool like <strong>favicon.io</strong> or <strong>realfavicongenerator.net</strong><br>
+            3. Or manually save as PNG and convert to ICO<br>
+            4. Place the favicon in your project root and update the HTML link tag
+        </p>
+    </div>
+</body>
+</html>
