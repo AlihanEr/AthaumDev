@@ -428,4 +428,55 @@ window.addEventListener('load', () => {
     }, 100);
 });
 
+// Force autoplay on mobile for project videos
+document.addEventListener('DOMContentLoaded', () => {
+    const videos = document.querySelectorAll('.project-preview video');
+
+    videos.forEach(video => {
+        // Ensure video is muted (required for autoplay on mobile)
+        video.muted = true;
+        video.playsInline = true;
+
+        // Try to play the video
+        const playPromise = video.play();
+
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                // Auto-play was prevented, try again on user interaction
+                console.log('Autoplay prevented, will retry on scroll');
+
+                // Retry on scroll/interaction
+                const playOnScroll = () => {
+                    video.play().catch(e => console.log('Video play failed:', e));
+                    window.removeEventListener('scroll', playOnScroll);
+                    document.removeEventListener('touchstart', playOnScroll);
+                };
+
+                window.addEventListener('scroll', playOnScroll, { once: true, passive: true });
+                document.addEventListener('touchstart', playOnScroll, { once: true, passive: true });
+            });
+        }
+    });
+});
+
+// Intersection Observer to play videos when in viewport (mobile optimization)
+if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+            if (entry.isIntersecting) {
+                video.play().catch(e => console.log('Video play on intersection failed:', e));
+            } else {
+                video.pause();
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    document.querySelectorAll('.project-preview video').forEach(video => {
+        videoObserver.observe(video);
+    });
+}
+
 console.log('AthaumDev Portfolio - Initialized ⚡');
