@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Home",
+    "skills": "Vaardigheden",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "AthaumDev",
+    "subtitle": "Digitale Ervaringen Creëren",
+    "description": "Full-Stack Ontwikkelaar gespecialiseerd in geavanceerde weboplossingen met robuuste beveiliging, naadloze integraties en verbluffend design.",
+    "viewWork": "Bekijk Mijn Werk",
+    "getInTouch": "Neem Contact Op"
+  },
+  "skills": {
+    "title": "Uitzonderlijke Kwaliteit",
+    "subtitle": "Gebouwd met precisie, aangedreven door innovatie",
+    "security": {
+      "title": "Robuuste Beveiliging",
+      "description": "Beveiligingsmaatregelen op bedrijfsniveau, inclusief authenticatie, encryptie en bescherming tegen veelvoorkomende kwetsbaarheden.",
+      "features": ["JWT Authenticatie", "Data Encryptie", "SQL Injectie Bescherming", "XSS Preventie"]
+    },
+    "database": {
+      "title": "Database Excellence",
+      "description": "Geoptimaliseerde database-architectuur met MongoDB, PostgreSQL en Redis voor razendsnelle gegevensbewerkingen.",
+      "features": ["MongoDB", "PostgreSQL", "Redis Cache", "Query Optimalisatie"]
+    },
+    "logic": {
+      "title": "Diepe Logica",
+      "description": "Complexe algoritmen en bedrijfslogica-implementatie met schone, onderhoudbare en schaalbare code-architectuur.",
+      "features": ["Schone Architectuur", "Ontwerppatronen", "Algoritme Optimalisatie", "Schaalbare Code"]
+    },
+    "design": {
+      "title": "Verbluffend Design",
+      "description": "Pixel-perfecte interfaces met moderne UI/UX-principes, responsieve lay-outs en vloeiende animaties.",
+      "features": ["Responsief Design", "Modern UI/UX", "Animaties", "Toegankelijkheid"]
+    },
+    "integrations": {
+      "title": "Integraties van Derden",
+      "description": "Naadloze integratie met API's, betalingsgateways, analyses, authenticatieproviders en clouddiensten.",
+      "features": ["REST API's", "Betalingsgateways", "OAuth 2.0", "Clouddiensten"]
+    }
+  },
+  "portfolio": {
+    "title": "Uitgelichte Projecten",
+    "subtitle": "Showcase van recent werk",
+    "project1": {
+      "title": "Kaarsbloemhandwerk Demo",
+      "description": "Showcase-website om het handwerk en de manieren om contact op te nemen en te bestellen te tonen",
+      "link": "Bekijk Project →",
+      "tags": ["Geweldig design", "Animaties", "Werk showcase", "Meertalige Ondersteuning"]
+    },
+    "project2": {
+      "title": "Analytics Dashboard",
+      "description": "Real-time datavisualisatie en rapportage",
+      "link": "Bekijk Project →",
+      "tags": ["Next.js", "TypeScript", "PostgreSQL", "Chart.js"]
+    },
+    "project3": {
+      "title": "Social Media Platform",
+      "description": "Community-gedreven applicatie voor het delen van inhoud",
+      "link": "Bekijk Project →",
+      "tags": ["Vue.js", "Express", "Redis", "Socket.io"]
+    }
+  },
+  "contact": {
+    "title": "Laten We Samenwerken",
+    "subtitle": "Klaar om uw project tot leven te brengen?",
+    "email": {
+      "title": "E-mail",
+      "link": "contact@athaumdev.com"
+    },
+    "linkedin": {
+      "title": "LinkedIn",
+      "link": "Verbind met mij"
+    },
+    "github": {
+      "title": "GitHub",
+      "link": "Bekijk mijn code"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 AthaumDev. Alle rechten voorbehouden. | Gemaakt met precisie."
+  }
+}

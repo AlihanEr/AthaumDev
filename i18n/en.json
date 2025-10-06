@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Home",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "AthaumDev",
+    "subtitle": "Crafting Digital Experiences",
+    "description": "Full-Stack Developer specializing in cutting-edge web solutions with robust security, seamless integrations, and stunning design.",
+    "viewWork": "View My Work",
+    "getInTouch": "Get In Touch"
+  },
+  "skills": {
+    "title": "Exceptional Quality",
+    "subtitle": "Built with precision, powered by innovation",
+    "security": {
+      "title": "Robust Security",
+      "description": "Enterprise-grade security measures including authentication, encryption, and protection against common vulnerabilities.",
+      "features": ["JWT Authentication", "Data Encryption", "SQL Injection Protection", "XSS Prevention"]
+    },
+    "database": {
+      "title": "Database Excellence",
+      "description": "Optimized database architecture with MongoDB, PostgreSQL, and Redis for lightning-fast data operations.",
+      "features": ["MongoDB", "PostgreSQL", "Redis Cache", "Query Optimization"]
+    },
+    "logic": {
+      "title": "Deep Logic",
+      "description": "Complex algorithms and business logic implementation with clean, maintainable, and scalable code architecture.",
+      "features": ["Clean Architecture", "Design Patterns", "Algorithm Optimization", "Scalable Code"]
+    },
+    "design": {
+      "title": "Stunning Design",
+      "description": "Pixel-perfect interfaces with modern UI/UX principles, responsive layouts, and smooth animations.",
+      "features": ["Responsive Design", "Modern UI/UX", "Animations", "Accessibility"]
+    },
+    "integrations": {
+      "title": "Third-Party Integrations",
+      "description": "Seamless integration with APIs, payment gateways, analytics, authentication providers, and cloud services.",
+      "features": ["REST APIs", "Payment Gateways", "OAuth 2.0", "Cloud Services"]
+    }
+  },
+  "portfolio": {
+    "title": "Featured Projects",
+    "subtitle": "Showcase of recent work",
+    "project1": {
+      "title": "Candle Flower Handcraft Demo",
+      "description": "Showcase website to show the handcrafts and ways to contact and command",
+      "link": "View Project →",
+      "tags": ["Great design", "Animations", "Work showcase", "Multiple Language Support"]
+    },
+    "project2": {
+      "title": "Analytics Dashboard",
+      "description": "Real-time data visualization and reporting",
+      "link": "View Project →",
+      "tags": ["Next.js", "TypeScript", "PostgreSQL", "Chart.js"]
+    },
+    "project3": {
+      "title": "Social Media Platform",
+      "description": "Community-driven content sharing application",
+      "link": "View Project →",
+      "tags": ["Vue.js", "Express", "Redis", "Socket.io"]
+    }
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Ready to bring your project to life?",
+    "email": {
+      "title": "Email",
+      "link": "contact@athaumdev.com"
+    },
+    "linkedin": {
+      "title": "LinkedIn",
+      "link": "Connect with me"
+    },
+    "github": {
+      "title": "GitHub",
+      "link": "View my code"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 AthaumDev. All rights reserved. | Crafted with precision."
+  }
+}

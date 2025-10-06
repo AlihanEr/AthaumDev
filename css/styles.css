@@ -119,6 +119,67 @@ body {
     color: var(--primary);
 }
 
+/* Language Switcher - Futuristic Design */
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background: rgba(0, 212, 255, 0.05);
+    padding: 0.3rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.lang-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.lang-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.lang-btn:hover::before {
+    opacity: 0.15;
+}
+
+.lang-btn:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.lang-btn.active {
+    color: var(--bg-dark);
+    background: var(--gradient-primary);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    transform: translateY(0);
+}
+
+.lang-btn.active::before {
+    opacity: 0;
+}
+
 /* Hero Section */
 .hero {
     min-height: 100vh;
@@ -580,18 +641,24 @@ body {
 .project-preview {
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (720/1280 = 0.5625) */
     overflow: hidden;
 }
 
-.project-preview img {
+.project-preview img,
+.project-preview video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: var(--transition);
 }
 
-.project-card:hover .project-preview img {
+.project-card:hover .project-preview img,
+.project-card:hover .project-preview video {
     transform: scale(1.1);
 }
 
@@ -649,6 +716,13 @@ body {
     border-radius: 20px;
     font-size: 0.85rem;
     border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+/* Custom colors for first project (Flummie) */
+.project-card:first-child .project-tags span {
+    background: rgba(255, 182, 193, 0.15);
+    color: #ffb6c1;
+    border-color: rgba(255, 182, 193, 0.3);
 }
 
 /* Contact Section */
@@ -728,6 +802,17 @@ body {
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
+    }
+
+    /* Language switcher mobile optimization */
+    .language-switcher {
+        gap: 0.3rem;
+        padding: 0.2rem;
+    }
+
+    .lang-btn {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.75rem;
     }
 
     /* Disable parallax on mobile for better performance */

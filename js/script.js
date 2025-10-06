@@ -232,10 +232,21 @@ if (slideshowContainer && !isMobile) {
     });
 }
 
-// Track scroll position on mobile to update dots
+// Track scroll position on mobile to update dots and pause auto-scroll
 if (isMobile && slideshowContainer) {
     let scrollTimeout;
+    let isUserScrolling = false;
+
+    slideshowContainer.addEventListener('touchstart', () => {
+        isUserScrolling = true;
+        clearInterval(slideTimer);
+    }, { passive: true });
+
     slideshowContainer.addEventListener('scroll', () => {
+        if (isUserScrolling) {
+            clearInterval(slideTimer);
+        }
+
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
             const slideWidth = slideshowContainer.offsetWidth;
@@ -246,6 +257,14 @@ if (isMobile && slideshowContainer) {
                 currentSlide = newIndex;
                 navDots.forEach(dot => dot.classList.remove('active'));
                 navDots[currentSlide].classList.add('active');
+            }
+
+            // Resume auto-scroll after 5 seconds of inactivity
+            if (isUserScrolling) {
+                isUserScrolling = false;
+                setTimeout(() => {
+                    slideTimer = setInterval(nextSlide, slideInterval);
+                }, 5000);
             }
         }, 100);
     }, { passive: true });

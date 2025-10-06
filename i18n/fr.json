@@ -1,0 +1,85 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "skills": "Compétences",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "AthaumDev",
+    "subtitle": "Créer des Expériences Numériques",
+    "description": "Développeur Full-Stack spécialisé dans les solutions web de pointe avec une sécurité robuste, des intégrations transparentes et un design époustouflant.",
+    "viewWork": "Voir Mon Travail",
+    "getInTouch": "Me Contacter"
+  },
+  "skills": {
+    "title": "Qualité Exceptionnelle",
+    "subtitle": "Construit avec précision, alimenté par l'innovation",
+    "security": {
+      "title": "Sécurité Robuste",
+      "description": "Mesures de sécurité de niveau entreprise incluant l'authentification, le chiffrement et la protection contre les vulnérabilités courantes.",
+      "features": ["Authentification JWT", "Chiffrement des Données", "Protection SQL Injection", "Prévention XSS"]
+    },
+    "database": {
+      "title": "Excellence de Base de Données",
+      "description": "Architecture de base de données optimisée avec MongoDB, PostgreSQL et Redis pour des opérations de données ultra-rapides.",
+      "features": ["MongoDB", "PostgreSQL", "Cache Redis", "Optimisation des Requêtes"]
+    },
+    "logic": {
+      "title": "Logique Approfondie",
+      "description": "Implémentation d'algorithmes complexes et de logique métier avec une architecture de code propre, maintenable et évolutive.",
+      "features": ["Architecture Propre", "Modèles de Conception", "Optimisation d'Algorithmes", "Code Évolutif"]
+    },
+    "design": {
+      "title": "Design Époustouflant",
+      "description": "Interfaces au pixel près avec des principes UI/UX modernes, des mises en page responsives et des animations fluides.",
+      "features": ["Design Responsive", "UI/UX Moderne", "Animations", "Accessibilité"]
+    },
+    "integrations": {
+      "title": "Intégrations Tierces",
+      "description": "Intégration transparente avec des API, des passerelles de paiement, des analyses, des fournisseurs d'authentification et des services cloud.",
+      "features": ["APIs REST", "Passerelles de Paiement", "OAuth 2.0", "Services Cloud"]
+    }
+  },
+  "portfolio": {
+    "title": "Projets Sélectionnés",
+    "subtitle": "Vitrine de travaux récents",
+    "project1": {
+      "title": "Démonstration d'Artisanat Floral de Bougies",
+      "description": "Site vitrine pour présenter l'artisanat et les moyens de contact et de commande",
+      "link": "Voir le Projet →",
+      "tags": ["Excellent design", "Animations", "Vitrine de travail", "Support Multilingue"]
+    },
+    "project2": {
+      "title": "Tableau de Bord d'Analyse",
+      "description": "Visualisation de données et rapports en temps réel",
+      "link": "Voir le Projet →",
+      "tags": ["Next.js", "TypeScript", "PostgreSQL", "Chart.js"]
+    },
+    "project3": {
+      "title": "Plateforme de Médias Sociaux",
+      "description": "Application de partage de contenu communautaire",
+      "link": "Voir le Projet →",
+      "tags": ["Vue.js", "Express", "Redis", "Socket.io"]
+    }
+  },
+  "contact": {
+    "title": "Travaillons Ensemble",
+    "subtitle": "Prêt à donner vie à votre projet ?",
+    "email": {
+      "title": "E-mail",
+      "link": "contact@athaumdev.com"
+    },
+    "linkedin": {
+      "title": "LinkedIn",
+      "link": "Connectez-vous avec moi"
+    },
+    "github": {
+      "title": "GitHub",
+      "link": "Voir mon code"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 AthaumDev. Tous droits réservés. | Conçu avec précision."
+  }
+}

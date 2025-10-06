@@ -17,11 +17,16 @@
         <div class="nav-container">
             <a href="#home" class="logo">Athaum<span>Dev</span></a>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="fr">FR</button>
+                <button class="lang-btn" data-lang="nl">NL</button>
+            </div>
         </div>
     </nav>
 
@@ -30,12 +35,12 @@
         <canvas id="network-canvas"></canvas>
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="glitch" data-text="AthaumDev">AthaumDev</h1>
-                <p class="subtitle">Crafting Digital Experiences</p>
-                <p class="description">Full-Stack Developer specializing in cutting-edge web solutions with robust security, seamless integrations, and stunning design.</p>
+                <h1 class="glitch" data-text="AthaumDev" data-i18n="hero.title">AthaumDev</h1>
+                <p class="subtitle" data-i18n="hero.subtitle">Crafting Digital Experiences</p>
+                <p class="description" data-i18n="hero.description">Full-Stack Developer specializing in cutting-edge web solutions with robust security, seamless integrations, and stunning design.</p>
                 <div class="hero-cta">
-                    <a href="#portfolio" class="btn-primary">View My Work</a>
-                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                    <a href="#portfolio" class="btn-primary" data-i18n="hero.viewWork">View My Work</a>
+                    <a href="#contact" class="btn-secondary" data-i18n="hero.getInTouch">Get In Touch</a>
                 </div>
             </div>
         </div>
@@ -49,8 +54,8 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="skills-slideshow">
-            <h2 class="section-title">Exceptional Quality</h2>
-            <p class="section-subtitle">Built with precision, powered by innovation</p>
+            <h2 class="section-title" data-i18n="skills.title">Exceptional Quality</h2>
+            <p class="section-subtitle" data-i18n="skills.subtitle">Built with precision, powered by innovation</p>
 
             <div class="slideshow-container">
                 <!-- Previous Arrow -->
@@ -76,13 +81,13 @@
                                 <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>Robust Security</h3>
-                        <p>Enterprise-grade security measures including authentication, encryption, and protection against common vulnerabilities.</p>
+                        <h3 data-i18n="skills.security.title">Robust Security</h3>
+                        <p data-i18n="skills.security.description">Enterprise-grade security measures including authentication, encryption, and protection against common vulnerabilities.</p>
                         <div class="slide-features">
-                            <span>JWT Authentication</span>
-                            <span>Data Encryption</span>
-                            <span>SQL Injection Protection</span>
-                            <span>XSS Prevention</span>
+                            <span data-i18n="skills.security.features.0">JWT Authentication</span>
+                            <span data-i18n="skills.security.features.1">Data Encryption</span>
+                            <span data-i18n="skills.security.features.2">SQL Injection Protection</span>
+                            <span data-i18n="skills.security.features.3">XSS Prevention</span>
                         </div>
                     </div>
                 </div>
@@ -96,13 +101,13 @@
                                 <path d="M9 21V9" stroke="currentColor" stroke-width="2"/>
                             </svg>
                         </div>
-                        <h3>Database Excellence</h3>
-                        <p>Optimized database architecture with MongoDB, PostgreSQL, and Redis for lightning-fast data operations.</p>
+                        <h3 data-i18n="skills.database.title">Database Excellence</h3>
+                        <p data-i18n="skills.database.description">Optimized database architecture with MongoDB, PostgreSQL, and Redis for lightning-fast data operations.</p>
                         <div class="slide-features">
-                            <span>MongoDB</span>
-                            <span>PostgreSQL</span>
-                            <span>Redis Cache</span>
-                            <span>Query Optimization</span>
+                            <span data-i18n="skills.database.features.0">MongoDB</span>
+                            <span data-i18n="skills.database.features.1">PostgreSQL</span>
+                            <span data-i18n="skills.database.features.2">Redis Cache</span>
+                            <span data-i18n="skills.database.features.3">Query Optimization</span>
                         </div>
                     </div>
                 </div>
@@ -122,13 +127,13 @@
                                 <path d="M17.66 6.34L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             </svg>
                         </div>
-                        <h3>Deep Logic</h3>
-                        <p>Complex algorithms and business logic implementation with clean, maintainable, and scalable code architecture.</p>
+                        <h3 data-i18n="skills.logic.title">Deep Logic</h3>
+                        <p data-i18n="skills.logic.description">Complex algorithms and business logic implementation with clean, maintainable, and scalable code architecture.</p>
                         <div class="slide-features">
-                            <span>Clean Architecture</span>
-                            <span>Design Patterns</span>
-                            <span>Algorithm Optimization</span>
-                            <span>Scalable Code</span>
+                            <span data-i18n="skills.logic.features.0">Clean Architecture</span>
+                            <span data-i18n="skills.logic.features.1">Design Patterns</span>
+                            <span data-i18n="skills.logic.features.2">Algorithm Optimization</span>
+                            <span data-i18n="skills.logic.features.3">Scalable Code</span>
                         </div>
                     </div>
                 </div>
@@ -141,13 +146,13 @@
                                 <path d="M22 3H16C14.9391 3 13.9217 3.42143 13.1716 4.17157C12.4214 4.92172 12 5.93913 12 7V21C12 20.2044 12.3161 19.4413 12.8787 18.8787C13.4413 18.3161 14.2044 18 15 18H22V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>Stunning Design</h3>
-                        <p>Pixel-perfect interfaces with modern UI/UX principles, responsive layouts, and smooth animations.</p>
+                        <h3 data-i18n="skills.design.title">Stunning Design</h3>
+                        <p data-i18n="skills.design.description">Pixel-perfect interfaces with modern UI/UX principles, responsive layouts, and smooth animations.</p>
                         <div class="slide-features">
-                            <span>Responsive Design</span>
-                            <span>Modern UI/UX</span>
-                            <span>Animations</span>
-                            <span>Accessibility</span>
+                            <span data-i18n="skills.design.features.0">Responsive Design</span>
+                            <span data-i18n="skills.design.features.1">Modern UI/UX</span>
+                            <span data-i18n="skills.design.features.2">Animations</span>
+                            <span data-i18n="skills.design.features.3">Accessibility</span>
                         </div>
                     </div>
                 </div>
@@ -161,13 +166,13 @@
                                 <path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </div>
-                        <h3>Third-Party Integrations</h3>
-                        <p>Seamless integration with APIs, payment gateways, analytics, authentication providers, and cloud services.</p>
+                        <h3 data-i18n="skills.integrations.title">Third-Party Integrations</h3>
+                        <p data-i18n="skills.integrations.description">Seamless integration with APIs, payment gateways, analytics, authentication providers, and cloud services.</p>
                         <div class="slide-features">
-                            <span>REST APIs</span>
-                            <span>Payment Gateways</span>
-                            <span>OAuth 2.0</span>
-                            <span>Cloud Services</span>
+                            <span data-i18n="skills.integrations.features.0">REST APIs</span>
+                            <span data-i18n="skills.integrations.features.1">Payment Gateways</span>
+                            <span data-i18n="skills.integrations.features.2">OAuth 2.0</span>
+                            <span data-i18n="skills.integrations.features.3">Cloud Services</span>
                         </div>
                     </div>
                 </div>
@@ -187,67 +192,76 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">Showcase of recent work</p>
+            <h2 class="section-title" data-i18n="portfolio.title">Featured Projects</h2>
+            <p class="section-subtitle" data-i18n="portfolio.subtitle">Showcase of recent work</p>
 
             <div class="portfolio-grid">
                 <!-- Project 1 -->
                 <div class="project-card" data-aos="zoom-in">
                     <div class="project-preview">
-                        <img src="images/project1.gif" alt="E-commerce Platform Demo" loading="lazy">
+                        <video autoplay loop muted playsinline loading="lazy">
+                            <source src="images/flummie-demo.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
                         <div class="project-overlay">
-                            <h3>E-commerce Platform</h3>
-                            <p>Full-stack shopping solution with payment integration</p>
-                            <a href="https://example.com/project1" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <h3 data-i18n="portfolio.project1.title">Candle Flower Handcraft Demo</h3>
+                            <p data-i18n="portfolio.project1.description">Showcase website to show the handcrafts and ways to contact and command</p>
+                            <a href="https://flummie.athaumart.com" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="portfolio.project1.link">
                                 View Project →
                             </a>
                         </div>
                     </div>
                     <div class="project-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                        <span>Stripe</span>
+                        <span data-i18n="portfolio.project1.tags.0">Great design</span>
+                        <span data-i18n="portfolio.project1.tags.1">Animations</span>
+                        <span data-i18n="portfolio.project1.tags.2">Work showcase</span>
+                        <span data-i18n="portfolio.project1.tags.3">Multiple Language Support</span>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card" data-aos="zoom-in" data-delay="100">
                     <div class="project-preview">
-                        <img src="images/project2.gif" alt="Dashboard Analytics Demo" loading="lazy">
+                        <video autoplay loop muted playsinline loading="lazy">
+                            <source src="images/project2.gif" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
                         <div class="project-overlay">
-                            <h3>Analytics Dashboard</h3>
-                            <p>Real-time data visualization and reporting</p>
-                            <a href="https://example.com/project2" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <h3 data-i18n="portfolio.project2.title">Analytics Dashboard</h3>
+                            <p data-i18n="portfolio.project2.description">Real-time data visualization and reporting</p>
+                            <a href="https://example.com/project2" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="portfolio.project2.link">
                                 View Project →
                             </a>
                         </div>
                     </div>
                     <div class="project-tags">
-                        <span>Next.js</span>
-                        <span>TypeScript</span>
-                        <span>PostgreSQL</span>
-                        <span>Chart.js</span>
+                        <span data-i18n="portfolio.project2.tags.0">Next.js</span>
+                        <span data-i18n="portfolio.project2.tags.1">TypeScript</span>
+                        <span data-i18n="portfolio.project2.tags.2">PostgreSQL</span>
+                        <span data-i18n="portfolio.project2.tags.3">Chart.js</span>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
                 <div class="project-card" data-aos="zoom-in" data-delay="200">
                     <div class="project-preview">
-                        <img src="images/project3.gif" alt="Social Media App Demo" loading="lazy">
+                        <video autoplay loop muted playsinline loading="lazy">
+                            <source src="images/project3.gif" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
                         <div class="project-overlay">
-                            <h3>Social Media Platform</h3>
-                            <p>Community-driven content sharing application</p>
-                            <a href="https://example.com/project3" target="_blank" rel="noopener noreferrer" class="project-link">
+                            <h3 data-i18n="portfolio.project3.title">Social Media Platform</h3>
+                            <p data-i18n="portfolio.project3.description">Community-driven content sharing application</p>
+                            <a href="https://example.com/project3" target="_blank" rel="noopener noreferrer" class="project-link" data-i18n="portfolio.project3.link">
                                 View Project →
                             </a>
                         </div>
                     </div>
                     <div class="project-tags">
-                        <span>Vue.js</span>
-                        <span>Express</span>
-                        <span>Redis</span>
-                        <span>Socket.io</span>
+                        <span data-i18n="portfolio.project3.tags.0">Vue.js</span>
+                        <span data-i18n="portfolio.project3.tags.1">Express</span>
+                        <span data-i18n="portfolio.project3.tags.2">Redis</span>
+                        <span data-i18n="portfolio.project3.tags.3">Socket.io</span>
                     </div>
                 </div>
 
@@ -259,25 +273,25 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Let's Work Together</h2>
-            <p class="section-subtitle">Ready to bring your project to life?</p>
+            <h2 class="section-title" data-i18n="contact.title">Let's Work Together</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">Ready to bring your project to life?</p>
 
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">✉️</div>
-                        <h3>Email</h3>
-                        <a href="mailto:contact@athaumdev.com">contact@athaumdev.com</a>
+                        <h3 data-i18n="contact.email.title">Email</h3>
+                        <a href="mailto:contact@athaumdev.com" data-i18n="contact.email.link">contact@athaumdev.com</a>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">💼</div>
-                        <h3>LinkedIn</h3>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">Connect with me</a>
+                        <h3 data-i18n="contact.linkedin.title">LinkedIn</h3>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" data-i18n="contact.linkedin.link">Connect with me</a>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">💻</div>
-                        <h3>GitHub</h3>
-                        <a href="https://github.com" target="_blank" rel="noopener noreferrer">View my code</a>
+                        <h3 data-i18n="contact.github.title">GitHub</h3>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" data-i18n="contact.github.link">View my code</a>
                     </div>
                 </div>
             </div>
@@ -287,10 +301,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 AthaumDev. All rights reserved. | Crafted with precision.</p>
+            <p data-i18n="footer.copyright">&copy; 2025 AthaumDev. All rights reserved. | Crafted with precision.</p>
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
