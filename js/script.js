@@ -111,7 +111,8 @@ animateParticles();
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const navDots = document.querySelectorAll('.nav-dot');
-const replayBtn = document.getElementById('replay-slideshow');
+const prevBtn = document.getElementById('prev-slide');
+const nextBtn = document.getElementById('next-slide');
 const slideInterval = 4000; // Auto-advance every 4 seconds
 let slideTimer;
 
@@ -147,6 +148,11 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
 function goToSlide(index) {
     currentSlide = index;
     showSlide(currentSlide);
@@ -158,20 +164,24 @@ function resetSlideTimer() {
     slideTimer = setInterval(nextSlide, slideInterval);
 }
 
-function replaySlideshow() {
-    currentSlide = 0;
-    showSlide(currentSlide);
-    resetSlideTimer();
-}
-
 // Navigation dots click handlers
 navDots.forEach((dot, index) => {
     dot.addEventListener('click', () => goToSlide(index));
 });
 
-// Replay button click handler
-if (replayBtn) {
-    replayBtn.addEventListener('click', replaySlideshow);
+// Arrow button click handlers
+if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetSlideTimer();
+    });
+}
+
+if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetSlideTimer();
+    });
 }
 
 // Initialize first slide

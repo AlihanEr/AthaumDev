@@ -52,6 +52,20 @@
             <p class="section-subtitle">Built with precision, powered by innovation</p>
 
             <div class="slideshow-container">
+                <!-- Previous Arrow -->
+                <button class="slide-arrow arrow-prev" id="prev-slide" aria-label="Previous slide">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <!-- Next Arrow -->
+                <button class="slide-arrow arrow-next" id="next-slide" aria-label="Next slide">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
                 <div class="slide active">
                     <div class="slide-content">
                         <div class="skill-icon-large">
@@ -159,20 +173,12 @@
             </div>
 
             <!-- Slideshow Navigation -->
-            <div class="slideshow-controls">
-                <button class="replay-btn" id="replay-slideshow" aria-label="Replay slideshow">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 4v6h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </button>
-                <div class="slideshow-nav">
-                    <button class="nav-dot active" data-slide="0"></button>
-                    <button class="nav-dot" data-slide="1"></button>
-                    <button class="nav-dot" data-slide="2"></button>
-                    <button class="nav-dot" data-slide="3"></button>
-                    <button class="nav-dot" data-slide="4"></button>
-                </div>
+            <div class="slideshow-nav">
+                <button class="nav-dot active" data-slide="0"></button>
+                <button class="nav-dot" data-slide="1"></button>
+                <button class="nav-dot" data-slide="2"></button>
+                <button class="nav-dot" data-slide="3"></button>
+                <button class="nav-dot" data-slide="4"></button>
             </div>
         </div>
     </section>
