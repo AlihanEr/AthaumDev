@@ -57,10 +57,10 @@
       "tags": ["Next.js", "TypeScript", "PostgreSQL", "Chart.js"]
     },
     "project3": {
-      "title": "Social Media Platform",
-      "description": "Community-gedreven applicatie voor het delen van inhoud",
-      "link": "Bekijk Project →",
-      "tags": ["Vue.js", "Express", "Redis", "Socket.io"]
+      "title": "Onderwijsmanagementplatform",
+      "description": "Vereenvoudig cursusbeheer, automatiseer betalingen en verbeter de leerervaring van studenten",
+      "link": "In Ontwikkeling",
+      "tags": ["NextJs", "Stripe", "PostgresSQL Database", "Inlogbeveiligingsbeheer"]
     }
   },
   "contact": {

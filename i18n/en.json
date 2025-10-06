@@ -57,10 +57,10 @@
       "tags": ["Next.js", "TypeScript", "PostgreSQL", "Chart.js"]
     },
     "project3": {
-      "title": "Social Media Platform",
-      "description": "Community-driven content sharing application",
-      "link": "View Project →",
-      "tags": ["Vue.js", "Express", "Redis", "Socket.io"]
+      "title": "Education Management Platform",
+      "description": "Simplify course management, automate payments, and enhance student learning experiences",
+      "link": "In Development",
+      "tags": ["NextJs", "Stripe", "PostgresSQL Database", "Login Security Management"]
     }
   },
   "contact": {
