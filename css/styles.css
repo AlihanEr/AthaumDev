@@ -48,17 +48,17 @@ body {
     display: none;
 }
 
-/* Navigation */
+/* Navigation - Minimalist */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     padding: 1.5rem 0;
-    background: rgba(10, 10, 15, 0.8);
-    backdrop-filter: blur(10px);
+    background: rgba(10, 10, 15, 0.6);
+    backdrop-filter: blur(20px);
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-container {
@@ -76,6 +76,11 @@ body {
     color: var(--text-light);
     text-decoration: none;
     letter-spacing: -0.5px;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    transform: translateY(-2px);
 }
 
 .logo span {
@@ -83,40 +88,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 2.5rem;
-}
-
-.nav-menu a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    position: relative;
-    transition: var(--transition);
-}
-
-.nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--gradient-primary);
-    transition: width 0.3s ease;
-}
-
-.nav-menu a:hover::after {
-    width: 100%;
-}
-
-.nav-menu a:hover {
-    color: var(--primary);
 }
 
 /* Language Switcher - Futuristic Design */
@@ -931,10 +902,6 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-
     /* Language switcher mobile optimization */
     .language-switcher {
         gap: 0.3rem;
@@ -946,6 +913,10 @@ body {
         font-size: 0.75rem;
     }
 
+    .logo {
+        font-size: 1.2rem;
+    }
+
     /* Disable parallax on mobile for better performance */
     .hero {
         padding: 120px 1rem;
@@ -955,6 +926,42 @@ body {
     /* Reduce animations on mobile */
     .glitch {
         animation: none;
+    }
+
+    /* Keep WIP animations on mobile */
+    .loader-ring {
+        animation: spin 2s linear infinite !important;
+    }
+
+    .loader-ring:nth-child(2) {
+        animation-duration: 1.5s !important;
+        animation-direction: reverse !important;
+    }
+
+    .loader-ring:nth-child(3) {
+        animation-duration: 1s !important;
+    }
+
+    .wip-card .project-preview::before {
+        animation: wipScan 3s linear infinite !important;
+    }
+
+    .wip-title {
+        animation: pulse 2s ease-in-out infinite !important;
+    }
+
+    .wip-loader {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1.5rem;
+    }
+
+    .wip-title {
+        font-size: 1.5rem;
+    }
+
+    .wip-subtitle {
+        font-size: 0.9rem;
     }
 
     .hero-cta {

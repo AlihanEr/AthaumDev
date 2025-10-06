@@ -236,15 +236,18 @@ if (slideshowContainer && !isMobile) {
 if (isMobile && slideshowContainer) {
     let scrollTimeout;
     let isUserScrolling = false;
+    let resumeTimeout;
 
     slideshowContainer.addEventListener('touchstart', () => {
         isUserScrolling = true;
         clearInterval(slideTimer);
+        clearTimeout(resumeTimeout);
     }, { passive: true });
 
     slideshowContainer.addEventListener('scroll', () => {
         if (isUserScrolling) {
             clearInterval(slideTimer);
+            clearTimeout(resumeTimeout);
         }
 
         clearTimeout(scrollTimeout);
@@ -262,11 +265,21 @@ if (isMobile && slideshowContainer) {
             // Resume auto-scroll after 5 seconds of inactivity
             if (isUserScrolling) {
                 isUserScrolling = false;
-                setTimeout(() => {
+                clearTimeout(resumeTimeout);
+                resumeTimeout = setTimeout(() => {
                     slideTimer = setInterval(nextSlide, slideInterval);
                 }, 5000);
             }
         }, 100);
+    }, { passive: true });
+
+    slideshowContainer.addEventListener('touchend', () => {
+        // Ensure timer resumes after touch ends
+        clearTimeout(resumeTimeout);
+        resumeTimeout = setTimeout(() => {
+            isUserScrolling = false;
+            slideTimer = setInterval(nextSlide, slideInterval);
+        }, 5000);
     }, { passive: true });
 }
 
