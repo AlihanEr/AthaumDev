@@ -107,6 +107,91 @@ function animateParticles() {
 
 animateParticles();
 
+// Skills Slideshow with left-to-right animation
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const navDots = document.querySelectorAll('.nav-dot');
+const replayBtn = document.getElementById('replay-slideshow');
+const slideInterval = 4000; // Auto-advance every 4 seconds
+let slideTimer;
+
+function showSlide(index) {
+    // Remove all classes from slides
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active', 'prev', 'next');
+
+        // Calculate adjacent slides
+        const prevIndex = (index - 1 + slides.length) % slides.length;
+        const nextIndex = (index + 1) % slides.length;
+
+        if (i === index) {
+            // Current slide - center
+            slide.classList.add('active');
+        } else if (i === prevIndex) {
+            // Previous slide - left side
+            slide.classList.add('prev');
+        } else if (i === nextIndex) {
+            // Next slide - right side
+            slide.classList.add('next');
+        }
+        // All other slides remain hidden (opacity: 0)
+    });
+
+    // Update navigation dots
+    navDots.forEach(dot => dot.classList.remove('active'));
+    navDots[index].classList.add('active');
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function goToSlide(index) {
+    currentSlide = index;
+    showSlide(currentSlide);
+    resetSlideTimer();
+}
+
+function resetSlideTimer() {
+    clearInterval(slideTimer);
+    slideTimer = setInterval(nextSlide, slideInterval);
+}
+
+function replaySlideshow() {
+    currentSlide = 0;
+    showSlide(currentSlide);
+    resetSlideTimer();
+}
+
+// Navigation dots click handlers
+navDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => goToSlide(index));
+});
+
+// Replay button click handler
+if (replayBtn) {
+    replayBtn.addEventListener('click', replaySlideshow);
+}
+
+// Initialize first slide
+showSlide(currentSlide);
+
+// Auto-advance slides
+slideTimer = setInterval(nextSlide, slideInterval);
+
+// Pause auto-advance on hover
+const slideshowContainer = document.querySelector('.slideshow-container');
+if (slideshowContainer) {
+    slideshowContainer.addEventListener('mouseenter', () => {
+        clearInterval(slideTimer);
+    });
+
+    slideshowContainer.addEventListener('mouseleave', () => {
+        resetSlideTimer();
+    });
+}
+
 // Smooth scroll for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
