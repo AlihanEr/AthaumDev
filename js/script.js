@@ -1,12 +1,19 @@
-// Mouse position tracking for network graph
+// Mouse position tracking for network graph (optimized)
 let mouseX = 0;
 let mouseY = 0;
+let mouseTicking = false;
 
-// Track mouse position
+// Track mouse position with throttling
 document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-});
+    if (!mouseTicking) {
+        window.requestAnimationFrame(() => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            mouseTicking = false;
+        });
+        mouseTicking = true;
+    }
+}, { passive: true });
 
 // Floating Particles Animation
 const canvas = document.getElementById('network-canvas');
@@ -19,7 +26,11 @@ function resizeCanvas() {
 }
 
 resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(resizeCanvas, 150);
+});
 
 // Particle class
 class Particle {
@@ -85,27 +96,37 @@ class Particle {
     }
 }
 
-// Create particles
+// Create particles (reduce for mobile)
 const particles = [];
-const particleCount = 60;
+const isMobile = window.innerWidth < 768;
+const particleCount = isMobile ? 30 : 60;
 
 for (let i = 0; i < particleCount; i++) {
     particles.push(new Particle());
 }
 
-// Animate particles
-function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+// Animate particles with performance optimization
+let lastFrameTime = 0;
+const frameDelay = 1000 / 60; // 60 FPS cap
 
-    particles.forEach(particle => {
-        particle.update();
-        particle.draw();
-    });
+function animateParticles(currentTime) {
+    const deltaTime = currentTime - lastFrameTime;
+
+    if (deltaTime >= frameDelay) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+
+        lastFrameTime = currentTime;
+    }
 
     requestAnimationFrame(animateParticles);
 }
 
-animateParticles();
+requestAnimationFrame(animateParticles);
 
 // Skills Slideshow with left-to-right animation
 let currentSlide = 0;
@@ -245,14 +266,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Navbar scroll effect
+// Navbar scroll effect (optimized)
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
+let navbarTicking = false;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    if (currentScroll > 100) {
+function updateNavbar(scrollPos) {
+    if (scrollPos > 100) {
         navbar.style.padding = '1rem 0';
         navbar.style.background = 'rgba(10, 10, 15, 0.95)';
         navbar.style.boxShadow = '0 4px 30px rgba(0, 212, 255, 0.1)';
@@ -261,9 +281,20 @@ window.addEventListener('scroll', () => {
         navbar.style.background = 'rgba(10, 10, 15, 0.8)';
         navbar.style.boxShadow = 'none';
     }
+}
 
-    lastScroll = currentScroll;
-});
+window.addEventListener('scroll', () => {
+    lastScroll = window.pageYOffset;
+
+    if (!navbarTicking) {
+        window.requestAnimationFrame(() => {
+            updateNavbar(lastScroll);
+            navbarTicking = false;
+        });
+
+        navbarTicking = true;
+    }
+}, { passive: true });
 
 // Project cards - Open link in new tab on click
 document.querySelectorAll('.project-card').forEach(card => {
@@ -278,16 +309,37 @@ document.querySelectorAll('.project-card').forEach(card => {
     });
 });
 
-// Add parallax effect to hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
+// Add parallax effect to hero section (optimized with throttling, disabled on mobile)
+let ticking = false;
+let lastKnownScrollPosition = 0;
+const isMobileDevice = window.innerWidth < 768;
+
+function updateParallax(scrollPos) {
+    // Skip parallax on mobile for better performance
+    if (isMobileDevice) return;
+
     const hero = document.querySelector('.hero');
 
-    if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        hero.style.opacity = 1 - (scrolled / window.innerHeight);
+    if (hero && scrollPos < window.innerHeight) {
+        hero.style.transform = `translate3d(0, ${scrollPos * 0.5}px, 0)`;
+        hero.style.opacity = 1 - (scrollPos / window.innerHeight);
     }
-});
+}
+
+if (!isMobileDevice) {
+    window.addEventListener('scroll', () => {
+        lastKnownScrollPosition = window.pageYOffset;
+
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                updateParallax(lastKnownScrollPosition);
+                ticking = false;
+            });
+
+            ticking = true;
+        }
+    }, { passive: true });
+}
 
 // Enhanced cursor effects for interactive elements - Disabled
 

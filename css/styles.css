@@ -33,6 +33,8 @@ body {
     overflow-x: hidden;
     position: relative;
     transition: background-color 0.6s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -126,6 +128,7 @@ body {
     position: relative;
     overflow: hidden;
     padding-top: 80px;
+    will-change: transform, opacity;
 }
 
 #network-canvas {
@@ -135,6 +138,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 0;
+    will-change: transform;
 }
 
 .hero-content {
@@ -213,6 +217,7 @@ body {
     overflow: hidden;
     border: none;
     cursor: pointer;
+    will-change: transform;
 }
 
 .btn-primary {
@@ -222,7 +227,7 @@ body {
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
+    transform: translate3d(0, -3px, 0);
     box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
 }
 
@@ -235,7 +240,7 @@ body {
 .btn-secondary:hover {
     background: var(--primary);
     color: var(--bg-dark);
-    transform: translateY(-3px);
+    transform: translate3d(0, -3px, 0);
 }
 
 /* Scroll Indicator */
@@ -366,16 +371,17 @@ body {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transform: translateX(0) scale(0.85);
+    transform: translate3d(0, 0, 0) scale(0.85);
     transition: all 1s cubic-bezier(0.65, 0, 0.35, 1);
     pointer-events: none;
     filter: brightness(0.4) blur(2px);
+    will-change: transform, opacity, filter;
 }
 
 .slide.active {
     left: 0;
     opacity: 1;
-    transform: translateX(0) scale(1);
+    transform: translate3d(0, 0, 0) scale(1);
     pointer-events: auto;
     z-index: 2;
     filter: brightness(1) blur(0);
@@ -384,7 +390,7 @@ body {
 .slide.prev {
     left: -100%;
     opacity: 0.4;
-    transform: translateX(0) scale(0.85);
+    transform: translate3d(0, 0, 0) scale(0.85);
     z-index: 1;
     filter: brightness(0.4) blur(2px);
 }
@@ -392,7 +398,7 @@ body {
 .slide.next {
     left: 100%;
     opacity: 0.4;
-    transform: translateX(0) scale(0.85);
+    transform: translate3d(0, 0, 0) scale(0.85);
     z-index: 1;
     filter: brightness(0.4) blur(2px);
 }
@@ -562,10 +568,11 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
     cursor: pointer;
+    will-change: transform;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translate3d(0, -10px, 0);
     border-color: var(--secondary);
     box-shadow: 0 20px 60px rgba(180, 126, 255, 0.2);
 }
@@ -707,13 +714,14 @@ body {
 /* Animations */
 [data-aos] {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translate3d(0, 30px, 0);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    will-change: transform, opacity;
 }
 
 [data-aos].aos-animate {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
 }
 
 /* Responsive */
@@ -722,8 +730,15 @@ body {
         display: none;
     }
 
+    /* Disable parallax on mobile for better performance */
     .hero {
         padding: 120px 1rem;
+        will-change: auto;
+    }
+
+    /* Reduce animations on mobile */
+    .glitch {
+        animation: none;
     }
 
     .hero-cta {
