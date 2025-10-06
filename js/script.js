@@ -136,28 +136,38 @@ const prevBtn = document.getElementById('prev-slide');
 const nextBtn = document.getElementById('next-slide');
 const slideInterval = 4000; // Auto-advance every 4 seconds
 let slideTimer;
+const slideshowContainer = document.querySelector('.slideshow-container');
 
 function showSlide(index) {
-    // Remove all classes from slides
-    slides.forEach((slide, i) => {
-        slide.classList.remove('active', 'prev', 'next');
+    // On mobile, scroll to the slide instead of using classes
+    if (isMobile && slideshowContainer) {
+        const slideWidth = slideshowContainer.offsetWidth;
+        slideshowContainer.scrollTo({
+            left: slideWidth * index,
+            behavior: 'smooth'
+        });
+    } else {
+        // Desktop: Remove all classes from slides
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active', 'prev', 'next');
 
-        // Calculate adjacent slides
-        const prevIndex = (index - 1 + slides.length) % slides.length;
-        const nextIndex = (index + 1) % slides.length;
+            // Calculate adjacent slides
+            const prevIndex = (index - 1 + slides.length) % slides.length;
+            const nextIndex = (index + 1) % slides.length;
 
-        if (i === index) {
-            // Current slide - center
-            slide.classList.add('active');
-        } else if (i === prevIndex) {
-            // Previous slide - left side
-            slide.classList.add('prev');
-        } else if (i === nextIndex) {
-            // Next slide - right side
-            slide.classList.add('next');
-        }
-        // All other slides remain hidden (opacity: 0)
-    });
+            if (i === index) {
+                // Current slide - center
+                slide.classList.add('active');
+            } else if (i === prevIndex) {
+                // Previous slide - left side
+                slide.classList.add('prev');
+            } else if (i === nextIndex) {
+                // Next slide - right side
+                slide.classList.add('next');
+            }
+            // All other slides remain hidden (opacity: 0)
+        });
+    }
 
     // Update navigation dots
     navDots.forEach(dot => dot.classList.remove('active'));
@@ -211,9 +221,8 @@ showSlide(currentSlide);
 // Auto-advance slides
 slideTimer = setInterval(nextSlide, slideInterval);
 
-// Pause auto-advance on hover
-const slideshowContainer = document.querySelector('.slideshow-container');
-if (slideshowContainer) {
+// Pause auto-advance on hover (desktop only)
+if (slideshowContainer && !isMobile) {
     slideshowContainer.addEventListener('mouseenter', () => {
         clearInterval(slideTimer);
     });
@@ -221,6 +230,25 @@ if (slideshowContainer) {
     slideshowContainer.addEventListener('mouseleave', () => {
         resetSlideTimer();
     });
+}
+
+// Track scroll position on mobile to update dots
+if (isMobile && slideshowContainer) {
+    let scrollTimeout;
+    slideshowContainer.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            const slideWidth = slideshowContainer.offsetWidth;
+            const scrollLeft = slideshowContainer.scrollLeft;
+            const newIndex = Math.round(scrollLeft / slideWidth);
+
+            if (newIndex !== currentSlide) {
+                currentSlide = newIndex;
+                navDots.forEach(dot => dot.classList.remove('active'));
+                navDots[currentSlide].classList.add('active');
+            }
+        }, 100);
+    }, { passive: true });
 }
 
 // Smooth scroll for navigation
