@@ -736,13 +736,67 @@ body {
         max-width: 300px;
     }
 
-    .skills-grid,
+    /* Skills Section Mobile */
+    .skills {
+        padding: 60px 0;
+    }
+
+    .skills-slideshow {
+        padding: 0 1rem;
+    }
+
+    .slideshow-container {
+        height: auto;
+        min-height: 450px;
+        margin: 2rem 0;
+    }
+
+    .slide-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .skill-icon-large {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1.5rem;
+    }
+
+    .slide-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .slide-features {
+        gap: 0.5rem;
+    }
+
+    .slide-features span {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    /* Hide arrows on mobile, use dots only */
+    .slide-arrow {
+        display: none;
+    }
+
+    /* Portfolio Grid */
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
 
     .section-title {
         font-size: 2.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -751,8 +805,67 @@ body {
         padding: 0 1rem;
     }
 
-    .skill-card,
+    /* Hero Section */
+    .hero {
+        padding: 100px 1rem;
+    }
+
+    .glitch {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    /* Skills Slideshow */
+    .slideshow-container {
+        min-height: 400px;
+    }
+
+    .slide-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .skill-icon-large {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+
+    .slide-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .slide-content p {
+        font-size: 0.9rem;
+    }
+
+    .slide-features span {
+        padding: 0.3rem 0.8rem;
+        font-size: 0.75rem;
+    }
+
+    .nav-dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .nav-dot.active {
+        width: 30px;
+    }
+
+    /* Contact Section */
     .contact-item {
         padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 }
