@@ -9,7 +9,7 @@
     "title": "AthaumDev",
     "subtitle": "Digitale Ervaringen Creëren",
     "description": "Full-Stack Ontwikkelaar gespecialiseerd in geavanceerde weboplossingen met robuuste beveiliging, naadloze integraties en verbluffend design.",
-    "viewWork": "Bekijk Mijn Werk",
+    "viewWork": "Portfolio",
     "getInTouch": "Neem Contact Op"
   },
   "skills": {
@@ -51,10 +51,10 @@
       "tags": ["Geweldig design", "Animaties", "Werk showcase", "Meertalige Ondersteuning"]
     },
     "project2": {
-      "title": "Analytics Dashboard",
-      "description": "Real-time datavisualisatie en rapportage",
+      "title": "KSB Consulting Website",
+      "description": "Professionele IT-consulting showcase website",
       "link": "Bekijk Project →",
-      "tags": ["Next.js", "TypeScript", "PostgreSQL", "Chart.js"]
+      "tags": ["Next.js", "Responsive", "Pro"]
     },
     "project3": {
       "title": "Onderwijsmanagementplatform",

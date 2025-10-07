@@ -9,7 +9,7 @@
     "title": "AthaumDev",
     "subtitle": "Créer des Expériences Numériques",
     "description": "Développeur Full-Stack spécialisé dans les solutions web de pointe avec une sécurité robuste, des intégrations transparentes et un design époustouflant.",
-    "viewWork": "Voir Mon Travail",
+    "viewWork": "Portfolio",
     "getInTouch": "Me Contacter"
   },
   "skills": {
@@ -51,10 +51,10 @@
       "tags": ["Excellent design", "Animations", "Vitrine de travail", "Support Multilingue"]
     },
     "project2": {
-      "title": "Tableau de Bord d'Analyse",
-      "description": "Visualisation de données et rapports en temps réel",
+      "title": "Site Web KSB Consulting",
+      "description": "Site vitrine professionnel de conseil informatique",
       "link": "Voir le Projet →",
-      "tags": ["Next.js", "TypeScript", "PostgreSQL", "Chart.js"]
+      "tags": ["Next.js", "Responsive", "Pro"]
     },
     "project3": {
       "title": "Plateforme de Gestion Éducative",

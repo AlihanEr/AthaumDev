@@ -9,7 +9,7 @@
     "title": "AthaumDev",
     "subtitle": "Crafting Digital Experiences",
     "description": "Full-Stack Developer specializing in cutting-edge web solutions with robust security, seamless integrations, and stunning design.",
-    "viewWork": "View My Work",
+    "viewWork": "Portfolio",
     "getInTouch": "Get In Touch"
   },
   "skills": {
@@ -51,10 +51,10 @@
       "tags": ["Great design", "Animations", "Work showcase", "Multiple Language Support"]
     },
     "project2": {
-      "title": "Analytics Dashboard",
-      "description": "Real-time data visualization and reporting",
+      "title": "KSB Consulting Website",
+      "description": "Professional IT consulting showcase website",
       "link": "View Project →",
-      "tags": ["Next.js", "TypeScript", "PostgreSQL", "Chart.js"]
+      "tags": ["Next.js", "Responsive", "Pro"]
     },
     "project3": {
       "title": "Education Management Platform",
