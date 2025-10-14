@@ -57,6 +57,12 @@
       "tags": ["Next.js", "Responsive", "Pro"]
     },
     "project3": {
+      "title": "Nutrea - AI Calorieënteller",
+      "description": "De snelste AI-aangedreven calorieënteller - scan uw eten en krijg direct voedingsinformatie",
+      "link": "Bekijk Project →",
+      "tags": ["Voeding", "Mobiele app", "Animatie", "Showcase"]
+    },
+    "project4": {
       "title": "Onderwijsmanagementplatform",
       "description": "Vereenvoudig cursusbeheer, automatiseer betalingen en verbeter de leerervaring van studenten",
       "link": "In Ontwikkeling",

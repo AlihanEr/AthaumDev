@@ -57,6 +57,12 @@
       "tags": ["Next.js", "Responsive", "Pro"]
     },
     "project3": {
+      "title": "Nutrea - AI Calorie Tracker",
+      "description": "The fastest AI-powered calorie tracker - scan your food and get instant nutritional information",
+      "link": "View Project →",
+      "tags": ["Nutrition", "Mobile app", "Animation", "Showcase"]
+    },
+    "project4": {
       "title": "Education Management Platform",
       "description": "Simplify course management, automate payments, and enhance student learning experiences",
       "link": "In Development",

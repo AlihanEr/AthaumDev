@@ -57,6 +57,12 @@
       "tags": ["Next.js", "Responsive", "Pro"]
     },
     "project3": {
+      "title": "Nutrea - Traqueur de Calories IA",
+      "description": "Le traqueur de calories IA le plus rapide - scannez vos aliments et obtenez des informations nutritionnelles instantanées",
+      "link": "Voir le Projet →",
+      "tags": ["Nutrition", "Application mobile", "Animation", "Vitrine"]
+    },
+    "project4": {
       "title": "Plateforme de Gestion Éducative",
       "description": "Simplifiez la gestion des cours, automatisez les paiements et améliorez l'expérience d'apprentissage des étudiants",
       "link": "En Développement",

@@ -653,6 +653,15 @@ body {
     margin-bottom: 0.5rem;
     color: #ffffff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: var(--transition);
+}
+
+.project-card:hover .project-overlay h3 {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: translateX(5px);
 }
 
 .project-overlay p {
@@ -703,6 +712,13 @@ body {
     background: rgba(37, 99, 235, 0.15) !important;
     color: #2563eb !important;
     border-color: rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Custom colors for Nutrea project */
+.tag-nutrea {
+    background: rgba(34, 139, 34, 0.15) !important;
+    color: #228b22 !important;
+    border-color: rgba(34, 139, 34, 0.3) !important;
 }
 
 /* Work In Progress Card */
